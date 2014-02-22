@@ -1,0 +1,87 @@
+* {
+	text-decoration: none !important; color: #a0a0a0 !important; list-style-type: none;
+}
+
+.center-contents {
+	text-align: center;
+}
+
+.margin-sub-10 {
+	/*seriously... negative width is a thing? */
+	margin: -10px;
+}
+
+.modal-left-align {
+	float: left;
+	height: auto;
+	width: 50%;
+	margin-bottom: 10px;
+}
+
+.modal-right-align {
+	float: left;
+	height: auto;
+	width: 50%;
+	margin-bottom: 10px;
+}
+
+.modal-content-title {
+	font-size: 17px;
+	height: 20px;
+	width: 50%;
+	vertical-align: center;
+	line-height: 20px;
+	margin-bottom: 25px;
+	float: left;
+	position: relative;
+}
+
+.listitem-tinted {
+	background-color: #ACD7F2;
+}
+.listitem-tinted-dark {
+	background-color: #5AB8F2;
+}
+
+.color-examples {
+	width: 100%;
+}
+
+.color-examples-container {
+	width: 100%;
+	margin-top: 20px;
+	position: relative;
+}
+
+.color-preview {
+	border-style: solid;
+	border-color: #000;
+	border-width: 1px;
+	border-radius: 5px;
+	height: 50px;
+	width: 100%;
+	position: relative;
+	float: left;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	text-align: center;
+	line-height: 50px;
+	vertical-align: center;
+}
+
+.color-preview-title {
+	float: right;
+	position: relative;
+	top: 2px;
+	right: 2px;
+}
+
+.color-info {
+	height: 30px;
+	line-height: 30px;
+	vertical-align: center;
+	text-align: left !important;
+}
+.color-info-title {
+	font-weight: bold;
+}
