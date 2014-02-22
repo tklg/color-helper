@@ -42,7 +42,7 @@
     </div>
 
     <script type="text/template" id="color">
-    	<div class="col-md-3 col-lg-3 col-sm-3 center-contents">
+    	<div class="col-md-4 col-lg-3 col-sm-12 center-contents">
     	    <a class="thumbnail" id="<%= model.get('hex') %>" title="<%= model.get('title') %>" style="background-color: <%= model.get('hex') %>" onClick="updateModalContents(this.id, this.title)">
     	        <div class="caption">
     	            <h4><%= model.get('title') %></h4>
@@ -72,8 +72,12 @@
                         <li class="color-examples" style="visibility: none"><div class="color-info color-info-title"></div></li>
                         <li class="color-examples"><div class="color-info color-info-title">RGB:</div></li>
                         <li class="color-examples"><div class="color-info" id="color-info-rgb">0, 0, 0</div></li>
+                        <li class="color-examples"><div class="color-info color-info-title">HSL:</div></li>
+                        <li class="color-examples"><div class="color-info" id="color-info-hsl">0, 0, 0</div></li>
                         <li class="color-examples"><div class="color-info color-info-title">HSV:</div></li>
                         <li class="color-examples"><div class="color-info" id="color-info-hsv">0, 0, 0</div></li>
+                        <li class="color-examples"><div class="color-info color-info-title">CMYK:</div></li>
+                        <li class="color-examples"><div class="color-info" id="color-info-cmyk">0, 0, 0, 0</div></li>
                         <li class="color-examples"><div class="color-info color-info-title">HEX:</div></li>
                         <li class="color-examples"><div class="color-info" id="color-info-hex">#000000</div></li>
                         <li class="color-examples"><div class="color-info color-info-title">Name:</div></li>
@@ -84,15 +88,17 @@
 
                 <div class="col-md-6">
                 
-                    <div class="modal-content-title"><i class="fa fa-puzzle-piece"></i>&emsp;Complementary Colors: </div>
+                    <div class="modal-content-title"><i class="fa fa-puzzle-piece"></i>&emsp;Color Schemes: </div>
                     <div class="color-examples-container">
                         <ul style="padding: 0px">
-                            <li class="color-examples"><div class="color-preview" id="color-preview-1">Color 1 : #000000</div></li>
-                            <li class="color-examples"><div class="color-preview" id="color-preview-2">Color 2 : #000000</div></li>
-                            <li class="color-examples"><div class="color-preview" id="color-preview-3">Color 3 : #000000</div></li>
-                            <li class="color-examples"><div class="color-preview" id="color-preview-4">Color 4 : #000000</div></li>
-                            <li class="color-examples"><div class="color-preview" id="color-preview-5">Color 5 : #000000</div></li>
-                            <li class="color-examples"><div class="color-preview" id="color-preview-6">Color 6 : #000000</div></li>
+
+                            <li class="color-examples"><div class="color-preview" id="color-preview-triad2">Color 5 : #000000</div></li>
+                            <li class="color-examples"><div class="color-preview" id="color-preview-splitcomp">Color 2 : #000000</div></li>
+                            <li class="color-examples"><div class="color-preview" id="color-preview-complementary">Color 1 : #000000</div></li>
+                            <li class="color-examples"><div class="color-preview" id="color-preview-splitcomp2">Color 3 : #000000</div></li>
+                            <li class="color-examples"><div class="color-preview" id="color-preview-triad">Color 4 : #000000</div></li>
+                            <li class="color-examples"><div class="color-preview" id="color-preview-analogous">Color 6 : #000000</div></li>
+                            <li class="color-examples"><div class="color-preview" id="color-preview-analogous2">Color 7 : #000000</div></li>
                         </ul>
                     </div>
                 </div>
