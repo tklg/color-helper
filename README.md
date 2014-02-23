@@ -8,3 +8,9 @@ webcolors on the web
 Shiny layout of colors to choose from.
 and get corresponding colors to go with for
 
+<h4>TODO:</h4>
+<ul>
+<li>Rewrite complementary/triad/whatever color calculation algorithms</li>
+<li>More stuff on the top of the page? idk</li>
+</ul>
+
