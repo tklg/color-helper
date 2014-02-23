@@ -30,30 +30,66 @@
     <div id="wrap">
       <div class="container">
 
-          <div id="colors">
+          <div id="palettes">
             
-              <h1>Color Helper</h1>
+              <h1>Color Palettes, with placeholder colors</h1>
                 <ul class="nav nav-tabs" style="margin-bottom: 30px;">
-                <li class="active"><a href="#" data-no-instant>Colors</a></li>
-                <li><a href="/color-helper/palettes.html" data-no-instant>Palettes</a></li>
+                <li><a href="/color-helper" data-no-instant>Colors</a></li>
+                <li class="active"><a href="#" data-no-instant>Palettes</a></li>
                 <li><a href="/color-helper/todo.html">Other Stuff</a></li>
                 </ul>
             
-            <div class="row center-contents" id="color-thumbs"></div>
+            <div class="row center-contents" id="palette-thumbs"></div>
         </div>
 
       </div>
     </div>
 
-    <script type="text/template" id="color">
-    	<div class="col-md-4 col-lg-3 col-sm-12 center-contents">
-    	    <a class="thumbnail" id="<%= model.get('hex') %>" title="<%= model.get('title') %>" style="background-color: <%= model.get('hex') %>" onClick="updateModalContents(this.id, this.title)">
-    	        <div class="caption">
-    	            <h4><%= model.get('title') %></h4>
-    	            <p><%= model.get('hex') %></p>
-    	        </div>
-    	    </a>
-        </div>
+    <script type="text/template" id="palette">
+    	<div class="col-md-6 col-lg-6 col-sm-12 center-contents" style="margin-bottom: 30px;">
+    		<div class="color-container">
+    	    	<div class="primary_color" id="<%= model.get('primary_color') %>" title="<%= model.get('title') %>" style="background-color: <%= model.get('primary_color') %>" onClick="updateModalContents(this.id, this.title)">
+	    	        <div class="caption">
+	    	            <p><%= model.get('primary_color') %></p>
+	    	        </div>
+	    	    </div>
+
+	    	    <div class="secondary_color" id="<%= model.get('secondary_color') %>" title="<%= model.get('title') %>" style="background-color: <%= model.get('secondary_color') %>" onClick="updateModalContents(this.id, this.title)">
+	    	        <div class="caption">
+	    	            <p><%= model.get('secondary_color') %></p>
+	    	        </div>
+	    	    </div>
+
+	    	    <div class="accent_color_1" id="<%= model.get('accent_color_1') %>" title="<%= model.get('title') %>" style="background-color: <%= model.get('accent_color_1') %>" onClick="updateModalContents(this.id, this.title)">
+	    	        <div class="caption">
+	    	            <p><%= model.get('accent_color_1') %></p>
+	    	        </div>
+	    	    </div>
+
+	    	    <div class="accent_color_2" id="<%= model.get('accent_color_2') %>" title="<%= model.get('title') %>" style="background-color: <%= model.get('accent_color_2') %>" onClick="updateModalContents(this.id, this.title)">
+	    	        <div class="caption">
+	    	            <p><%= model.get('accent_color_2') %></p>
+	    	        </div>
+	    	    </div>
+    	    </div>
+    	</div>
+    </script>
+
+    <script type="text/template" id="sample_1">
+    	<div class="col-md-6 col-lg-6 col-sm-12 center-contents" style="margin-bottom: 30px;">
+    		<div class="color-container">
+    	    	<div class="sample-header-1" style="background-color: <%= model.get('secondary_color') %>">
+	    	    	<div class="sample-header-menu-btn-1" style="background-color: <%= model.get('accent_color_1') %>">Home</div>
+					<div class="sample-header-menu-btn-1">About Us</div>
+	    	    	<div class="sample-header-menu-btn-1">Things We Do</div>
+    	    	</div>
+
+    	    	<div class="sample-body-1" style="background-color: <%= model.get('primary_color') %>">
+    	    		<div class="sample-body-decor-1-1" style="background-color: <%= model.get('accent_color_1') %>"></div>
+    	    		<div class="sample-body-decor-2-1" style="background-color: <%= model.get('accent_color_2') %>"></div>
+    	    	</div>
+    	    </div>
+    	</div>
     </script>
 
     <!-- Modal -->
@@ -120,9 +156,9 @@
     <script src="../js/backbone.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="js/colormath.js"></script>
-    <script src="js/app_colors.js"></script>
+    <script src="js/app_palettes.js"></script>
     <script src="../js/instantclick.min.js" data-no-instant></script>
-    <script data-no-instant>InstantClick.init();</script>
+	<script data-no-instant>InstantClick.init();</script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
