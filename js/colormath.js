@@ -113,7 +113,7 @@ calculateComplimentaries = function(h, s, v, type) {
     
 
     if (type === 'complementary') {
-        h2 = (h / 360) + 0.5;
+        h2 = (h % 360) + 0.5;
         if (h2 > 1) {
             h2 -= 1;
         }
@@ -142,8 +142,8 @@ calculateComplimentaries = function(h, s, v, type) {
         //}
 
     } else if (type === 'triad') {
-        triad1 = (h / 360) + 0.33;
-        triad2 = (h / 360) - 0.33;
+        triad1 = (h % 360) + 0.33;
+        triad2 = (h % 360) - 0.33;
         if (triad1 > 1) {
             triad1-=1;
         } else if (triad1 < 0) {
@@ -185,8 +185,8 @@ calculateComplimentaries = function(h, s, v, type) {
         //}
 
     } else if (type === 'analogous') {
-        analogous1 = (h / 360) + 0.15;
-        analogous2 = (h / 360) - 0.15;
+        analogous1 = (h % 360) + 0.15;
+        analogous2 = (h % 360) - 0.15;
         if (analogous1 > 1) {
             analogous1-=1;
         } else if (analogous1 < 0) {
@@ -227,8 +227,8 @@ calculateComplimentaries = function(h, s, v, type) {
             console.log("analogous2Hex: " + analogous2Hex);
         //}
     } else if (type === 'splitcomp') {
-        splitcomp1 = (h / 360) + 0.65;
-        splitcomp2 = (h / 360) - 0.65;
+        splitcomp1 = (h % 360) + 0.45;
+        splitcomp2 = (h % 360) - 0.45;
         if (splitcomp1 > 1) {
             splitcomp1-=1;
         } else if (splitcomp1 < 0) {
