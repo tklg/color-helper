@@ -2,14 +2,10 @@ var r, g, b, h, s, l, v, c, m, y, k, hsv2r, hsv2g, hsv2b;
 var computedH, computedS, computedV = 0;
 var complimentaryHex, triadHex1, triadHex2,analogousHex1, analogousHex2, splitcompHex1, splitcompHex2 = '#123456';
 var triad1r, triad1g, triad1b, triad2r, triad2g, triad2b, splitcomp1r, splitcomp1g, splitcomp1b, splitcomp2r, splitcomp2g, splitcomp2b, analogous1r, analogous1g, analogous1b, analogous2r, analogous2g, analogous2b;
+var angleOfOffset = 0.10;
 
 function hexToRgb(hex) {
-    // hexToRGB = function(hex){
-    // var r = hex >> 16;
-    // var g = hex >> 8 & 0xFF;
-    // var b = hex & 0xFF;
-    // return [r,g,b];
- 
+
     if ( hex.charAt(0) === '#' ) {
         hex = hex.substr(1);
     }
@@ -115,7 +111,7 @@ calculateComplimentaries = function(h, s, v, type) {
     if (type === 'complementary') {
         h2 = (h % 360) + 0.5;
         if (h2 > 1) {
-            h2 -= 1;
+            h2--;
         }
 
         if (s == 0) {
@@ -145,14 +141,14 @@ calculateComplimentaries = function(h, s, v, type) {
         triad1 = (h % 360) + 0.33;
         triad2 = (h % 360) - 0.33;
         if (triad1 > 1) {
-            triad1-=1;
+            triad1--;
         } else if (triad1 < 0) {
-            triad1+=1;
+            triad1++;
         }
         if (triad2 > 1) {
-            triad2-=1;
+            triad2--;
         } else if (triad2 < 0) {
-            triad2+=1;
+            triad2++;
         }
 
         if (s == 0) {
@@ -185,8 +181,8 @@ calculateComplimentaries = function(h, s, v, type) {
         //}
 
     } else if (type === 'analogous') {
-        analogous1 = (h % 360) + 0.15;
-        analogous2 = (h % 360) - 0.15;
+        analogous1 = (h % 360) + 0.10;
+        analogous2 = (h % 360) - 0.10;
         if (analogous1 > 1) {
             analogous1-=1;
         } else if (analogous1 < 0) {
