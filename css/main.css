@@ -180,3 +180,8 @@
 	position: absolute;
 	bottom: 0px;
 }
+
+.social-icons-list {
+	float: left;
+	position: relative;
+}
