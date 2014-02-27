@@ -88,7 +88,7 @@ $(document).ready(function(){
 //Other stuff
 //moved to colormath.js
 
-updateModalContents = function(button_id, color_name) {
+setModalContents = function(button_id, color_name) {
    
     hexToRgb(button_id.toString());
     console.log("hexToRgb");
