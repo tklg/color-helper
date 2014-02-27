@@ -4,6 +4,7 @@ var complimentaryHex, triadHex1, triadHex2,analogousHex1, analogousHex2, splitco
 var triad1r, triad1g, triad1b, triad2r, triad2g, triad2b, splitcomp1r, splitcomp1g, splitcomp1b, splitcomp2r, splitcomp2g, splitcomp2b, analogous1r, analogous1g, analogous1b, analogous2r, analogous2g, analogous2b;
 var angleOfOffset = 0.10;
 var colorAngle = 0;
+var colorsUpdated = false;
 
 function hexToRgb(hex) {
 
@@ -330,6 +331,12 @@ calculateCMYK = function(r, g, b) {
 
 updateColors = function(angle) {
 
-    colorAngle = Math.abs(angle) / 100;
+    var colorsUpdated = true;
+    if (angle > 45) {
+        document.getElementById("angle-alert").style.display="inline";
+    } else {
+        document.getElementById("angle-alert").style.display="none";
+        colorAngle = Math.abs(angle) / 100;
+    }
     
 }

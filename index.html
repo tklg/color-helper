@@ -111,15 +111,16 @@
             <div class="modal-footer">
                 <div class="row">
                 <div class="col-lg-6">
+                    <div class="alert alert-danger" id="angle-alert" style="display: none">Please enter an angle under 45&deg;</div>
                 </div>
 
                   <div class="col-lg-6">
                     <div class="input-group">
                       
                       <span class="input-group-addon">Change Angle:</span>
-                      <input type="text" class="form-control" id="newangle" placeholder="This is a test" value="">
+                      <input type="text" class="form-control" id="newangle" placeholder="Angle between colors" value="">
                       <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" onClick="updateColors(document.getElementById('newangle').value); updateModalContents()">Go!</button>
+                        <button class="btn btn-primary" type="button" onClick="updateColors(document.getElementById('newangle').value); updateModalContents();">Go!</button>
                       </span>
                     </div><!-- /input-group -->
                   </div><!-- /.col-lg-6 -->
