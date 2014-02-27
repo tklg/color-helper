@@ -330,6 +330,6 @@ calculateCMYK = function(r, g, b) {
 
 updateColors = function(angle) {
 
-    colorAngle = Math.abs(angle);
+    colorAngle = Math.abs(angle) / 100;
     
 }
