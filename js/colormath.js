@@ -3,6 +3,7 @@ var computedH, computedS, computedV = 0;
 var complimentaryHex, triadHex1, triadHex2,analogousHex1, analogousHex2, splitcompHex1, splitcompHex2 = '#123456';
 var triad1r, triad1g, triad1b, triad2r, triad2g, triad2b, splitcomp1r, splitcomp1g, splitcomp1b, splitcomp2r, splitcomp2g, splitcomp2b, analogous1r, analogous1g, analogous1b, analogous2r, analogous2g, analogous2b;
 var angleOfOffset = 0.10;
+var colorAngle = 0;
 
 function hexToRgb(hex) {
 
@@ -109,7 +110,7 @@ calculateComplimentaries = function(h, s, v, type) {
     
 
     if (type === 'complementary') {
-        h2 = (h % 360) + 0.5;
+        h2 = (h % 360) + 0.5 + colorAngle;
         if (h2 > 1) {
             h2--;
         }
@@ -138,8 +139,8 @@ calculateComplimentaries = function(h, s, v, type) {
         //}
 
     } else if (type === 'triad') {
-        triad1 = (h % 360) + 0.33;
-        triad2 = (h % 360) - 0.33;
+        triad1 = (h % 360) + 0.33 + colorAngle;
+        triad2 = (h % 360) - 0.33 - colorAngle;
         if (triad1 > 1) {
             triad1--;
         } else if (triad1 < 0) {
@@ -181,8 +182,8 @@ calculateComplimentaries = function(h, s, v, type) {
         //}
 
     } else if (type === 'analogous') {
-        analogous1 = (h % 360) + 0.10;
-        analogous2 = (h % 360) - 0.10;
+        analogous1 = (h % 360) + 0.10 + colorAngle;
+        analogous2 = (h % 360) - 0.10 - colorAngle;
         if (analogous1 > 1) {
             analogous1-=1;
         } else if (analogous1 < 0) {
@@ -223,8 +224,8 @@ calculateComplimentaries = function(h, s, v, type) {
             console.log("analogous2Hex: " + analogous2Hex);
         //}
     } else if (type === 'splitcomp') {
-        splitcomp1 = (h % 360) + 0.45;
-        splitcomp2 = (h % 360) - 0.45;
+        splitcomp1 = (h % 360) + 0.45 + colorAngle;
+        splitcomp2 = (h % 360) - 0.45 - colorAngle;
         if (splitcomp1 > 1) {
             splitcomp1-=1;
         } else if (splitcomp1 < 0) {
@@ -325,4 +326,10 @@ calculateCMYK = function(r, g, b) {
        y = ( y - var_K ) / ( 1 - var_K )
     }
     k = var_K
+}
+
+updateColors = function(angle) {
+
+    colorAngle = Math.abs(angle);
+    
 }

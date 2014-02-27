@@ -77,8 +77,9 @@ $(document).ready(function(){
 //Other stuff
 //moved to colormath.js
 
-updateModalContents = function(button_id, color_name) {
+setModalContents = function(button_id, color_name) {
    
+    colorAngle = 0;
     hexToRgb(button_id.toString());
     calculateHSL(r, g, b);
     calculateCMYK(r, g, b);
@@ -113,4 +114,27 @@ updateModalContents = function(button_id, color_name) {
     document.getElementById("color-preview-splitcomp2").innerHTML=("Split complementary: #" + splitcomp2Hex);
     
     $('#colorInfoModal').modal();
+}
+
+updateModalContents = function() {
+
+    calculateComplimentaries(h, s, l, 'complementary');
+    document.getElementById("color-preview-complementary").style.backgroundColor=("#" + complimentaryHex);
+    document.getElementById("color-preview-complementary").innerHTML=("Complementary: #" + complimentaryHex);
+    calculateComplimentaries(h, s, l, 'triad');
+    document.getElementById("color-preview-triad").style.backgroundColor=("#" + triad1Hex);
+    document.getElementById("color-preview-triad").innerHTML=("Triad: #" + triad1Hex);
+    document.getElementById("color-preview-triad2").style.backgroundColor=("#" + triad2Hex);
+    document.getElementById("color-preview-triad2").innerHTML=("Triad: #" + triad2Hex);
+    calculateComplimentaries(h, s, l, 'analogous');
+    document.getElementById("color-preview-analogous").style.backgroundColor=("#" + analogous1Hex);
+    document.getElementById("color-preview-analogous").innerHTML=("Analogous: #" + analogous1Hex);
+    document.getElementById("color-preview-analogous2").style.backgroundColor=("#" + analogous2Hex);
+    document.getElementById("color-preview-analogous2").innerHTML=("Analogous: #" + analogous2Hex);
+    calculateComplimentaries(h, s, l, 'splitcomp');
+    document.getElementById("color-preview-splitcomp").style.backgroundColor=("#" + splitcomp1Hex);
+    document.getElementById("color-preview-splitcomp").innerHTML=("Split complementary: #" + splitcomp1Hex);
+    document.getElementById("color-preview-splitcomp2").style.backgroundColor=("#" + splitcomp2Hex);
+    document.getElementById("color-preview-splitcomp2").innerHTML=("Split complementary: #" + splitcomp2Hex);
+
 }

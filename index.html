@@ -47,7 +47,7 @@
 
     <script type="text/template" id="color">
     	<div class="col-md-4 col-lg-3 col-sm-12 center-contents">
-    	    <a class="thumbnail" id="<%= model.get('hex') %>" title="<%= model.get('title') %>" style="background-color: <%= model.get('hex') %>" onClick="updateModalContents(this.id, this.title)">
+    	    <a class="thumbnail" id="<%= model.get('hex') %>" title="<%= model.get('title') %>" style="background-color: <%= model.get('hex') %>" onClick="setModalContents(this.id, this.title)">
     	        <div class="caption">
     	            <h4><%= model.get('title') %></h4>
     	            <p><%= model.get('hex') %></p>
@@ -109,7 +109,21 @@
             </div>
             
             <div class="modal-footer">
-            
+                <div class="row">
+                <div class="col-lg-6">
+                </div>
+
+                  <div class="col-lg-6">
+                    <div class="input-group">
+                      
+                      <span class="input-group-addon">Change Angle:</span>
+                      <input type="text" class="form-control" id="newangle" placeholder="Angle of colorwheel" value="">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" onClick="updateColors(document.getElementById('newangle').value); updateModalContents()">Go!</button>
+                      </span>
+                    </div><!-- /input-group -->
+                  </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
             </div>
         </div>
       </div>

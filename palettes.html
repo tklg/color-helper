@@ -48,25 +48,25 @@
     <script type="text/template" id="palette">
     	<div class="col-md-6 col-lg-6 col-sm-12 center-contents" style="margin-bottom: 30px;">
     		<div class="color-container">
-    	    	<div class="primary_color" id="<%= model.get('primary_color') %>" title="<%= model.get('title') %>" style="background-color: <%= model.get('primary_color') %>" onClick="updateModalContents(this.id, this.title)">
+    	    	<div class="primary_color" id="<%= model.get('primary_color') %>" title="<%= model.get('title') %>" style="background-color: <%= model.get('primary_color') %>" onClick="setModalContents(this.id, this.title)">
 	    	        <div class="caption">
 	    	            <p><%= model.get('primary_color') %></p>
 	    	        </div>
 	    	    </div>
 
-	    	    <div class="secondary_color" id="<%= model.get('secondary_color') %>" title="<%= model.get('title') %>" style="background-color: <%= model.get('secondary_color') %>" onClick="updateModalContents(this.id, this.title)">
+	    	    <div class="secondary_color" id="<%= model.get('secondary_color') %>" title="<%= model.get('title') %>" style="background-color: <%= model.get('secondary_color') %>" onClick="setModalContents(this.id, this.title)">
 	    	        <div class="caption">
 	    	            <p><%= model.get('secondary_color') %></p>
 	    	        </div>
 	    	    </div>
 
-	    	    <div class="accent_color_1" id="<%= model.get('accent_color_1') %>" title="<%= model.get('title') %>" style="background-color: <%= model.get('accent_color_1') %>" onClick="updateModalContents(this.id, this.title)">
+	    	    <div class="accent_color_1" id="<%= model.get('accent_color_1') %>" title="<%= model.get('title') %>" style="background-color: <%= model.get('accent_color_1') %>" onClick="setModalContents(this.id, this.title)">
 	    	        <div class="caption">
 	    	            <p><%= model.get('accent_color_1') %></p>
 	    	        </div>
 	    	    </div>
 
-	    	    <div class="accent_color_2" id="<%= model.get('accent_color_2') %>" title="<%= model.get('title') %>" style="background-color: <%= model.get('accent_color_2') %>" onClick="updateModalContents(this.id, this.title)">
+	    	    <div class="accent_color_2" id="<%= model.get('accent_color_2') %>" title="<%= model.get('title') %>" style="background-color: <%= model.get('accent_color_2') %>" onClick="setModalContents(this.id, this.title)">
 	    	        <div class="caption">
 	    	            <p><%= model.get('accent_color_2') %></p>
 	    	        </div>
@@ -145,7 +145,21 @@
             </div>
             
             <div class="modal-footer">
-            
+            <div class="row">
+                <div class="col-lg-6">
+                </div>
+
+                  <div class="col-lg-6">
+                    <div class="input-group">
+                      
+                      <span class="input-group-addon">Change Angle:</span>
+                      <input type="text" class="form-control" id="newangle" placeholder="Angle of colorwheel" value="">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" onClick="updateColors(document.getElementById('newangle').value); updateModalContents()">Go!</button>
+                      </span>
+                    </div><!-- /input-group -->
+                  </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
             </div>
         </div>
       </div>
