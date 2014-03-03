@@ -90,8 +90,9 @@ $(document).ready(function(){
 
 setModalContents = function(button_id, color_name) {
    
-
     colorAngle = 0;
+    $('#colordata').simpleSlider("setValue", 0);
+
     hexToRgb(button_id.toString());
     console.log("hexToRgb");
     calculateHSL(r, g, b);

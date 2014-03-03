@@ -351,7 +351,7 @@ $("#colordata")
     .bind("slider:changed", function (event, data) {
         $(this)
         .nextAll(".colordata-addon:first")
-          .html(data.value.toFixed(1) + "&deg;");
+          .html(data.value.toFixed() + "&deg;");
       colorAngle = Math.round(data.value) / 100;
       updateModalContents();
       //document.getElementById('colordata-addon').innerHTML=(Math.round(data.value));
