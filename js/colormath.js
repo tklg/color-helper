@@ -340,3 +340,19 @@ updateColors = function(angle) {
     }
     
 }
+
+$("#colordata")
+    .each(function () {
+          var input = $(this);
+          $("<span>")
+            .addClass("colordata-addon")
+            .insertAfter($(this));
+        })
+    .bind("slider:changed", function (event, data) {
+        $(this)
+        .nextAll(".colordata-addon:first")
+          .html(data.value.toFixed(1) + "&deg;");
+      colorAngle = Math.round(data.value) / 100;
+      updateModalContents();
+      //document.getElementById('colordata-addon').innerHTML=(Math.round(data.value));
+    });

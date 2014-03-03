@@ -16,6 +16,7 @@
 
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/simple-slider.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -109,22 +110,20 @@
             </div>
             
             <div class="modal-footer">
+            
                 <div class="row">
-                <div class="col-lg-6">
-                    <div class="alert alert-danger" id="angle-alert" style="display: none">Please enter an angle under 45&deg;</div>
-                </div>
+                    <div class="col-lg-6"> 
+                        <div class="panel panel-info">
+                            <div class="panel-body">
+                                Drag to change Hue angle&emsp;&emsp;
+                            </div>
+                        </div>
+                    </div>
 
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      
-                      <span class="input-group-addon">Change Angle:</span>
-                      <input type="text" class="form-control" id="newangle" placeholder="Angle between colors" value="">
-                      <span class="input-group-btn">
-                        <button class="btn btn-primary" type="button" onClick="updateColors(document.getElementById('newangle').value); updateModalContents();">Go!</button>
-                      </span>
-                    </div><!-- /input-group -->
-                  </div><!-- /.col-lg-6 -->
-                </div><!-- /.row -->
+                    <div class="col-lg-6">
+                            <input type="text" id="colordata" data-slider="true" data-slider-range="-15, 45" data-slider-step="1" value="0">
+                    </div>
+                </div>
             </div>
         </div>
       </div>
@@ -138,6 +137,7 @@
     <script src="js/app_colors.js"></script>
     <script src="../js/instantclick.min.js" data-no-instant></script>
     <script data-no-instant>InstantClick.init();</script>
+    <script src="js/simple-slider.min.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

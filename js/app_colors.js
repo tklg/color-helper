@@ -80,6 +80,8 @@ $(document).ready(function(){
 setModalContents = function(button_id, color_name) {
 
     colorAngle = 0;
+    //document.getElementById('newangle').value="";
+    //selector.simpleSlider("setValue", value);
     hexToRgb(button_id.toString());
     calculateHSL(r, g, b);
     calculateCMYK(r, g, b);

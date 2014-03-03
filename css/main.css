@@ -185,3 +185,18 @@
 	float: left;
 	position: relative;
 }
+
+.colordata-addon { 
+	color: #888; 
+	font-size: 14px; 
+	padding-top: 1px; 
+	margin-left: 5px; 
+	vertical-align: top;
+}
+
+[class^=slider] { 
+	display: inline-block; 
+	margin-bottom: 30px;
+	float: left;
+	position: relative;
+}
