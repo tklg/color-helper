@@ -11,7 +11,6 @@ and get corresponding colors to go with them
 
 <h4>TODO:</h4>
 <ul>
-<li>~~Rewrite complementary/triad/whatever color calculation algorithms~~</li>
 <li>More stuff on the top of the page? idk</li>
 <li>Make the todo page more interesting</li>
 </ul>
