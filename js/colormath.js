@@ -352,7 +352,7 @@ $("#colordata")
         $(this)
         .nextAll(".colordata-addon:first")
           .html(data.value.toFixed() + "&deg;");
-      colorAngle = Math.round(data.value) / 100;
+      colorAngle = Math.round(data.value) / 360;
       updateModalContents();
       //document.getElementById('colordata-addon').innerHTML=(Math.round(data.value));
     });
