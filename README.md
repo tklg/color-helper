@@ -13,5 +13,6 @@ and get corresponding colors to go with them
 <ul>
 <li>More stuff on the top of the page? idk</li>
 <li>Make the todo page more interesting</li>
+<li>Add some sort of navigation thingy to the colors page</li>
 </ul>
 
