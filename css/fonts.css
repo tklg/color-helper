@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'FF-shadow';
+    src: url('../fonts/forgottenfuturist/forgotten_futurist_shadow-webfont.eot');
+    src: url('../fonts/forgottenfuturist/forgotten_futurist_shadow-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/forgottenfuturist/forgotten_futurist_shadow-webfont.woff') format('woff'),
+         url('../fonts/forgottenfuturist/forgotten_futurist_shadow-webfont.ttf') format('truetype'),
+         url('../fonts/forgottenfuturist/forgotten_futurist_shadow-webfont.svg#forgotten_futuristshadow') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FF-regular';
+    src: url('../fonts/forgottenfuturist/forgotten_futurist_rg-webfont.eot');
+    src: url('../fonts/forgottenfuturist/forgotten_futurist_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/forgottenfuturist/forgotten_futurist_rg-webfont.woff') format('woff'),
+         url('../fonts/forgottenfuturist/forgotten_futurist_rg-webfont.ttf') format('truetype'),
+         url('../fonts/forgottenfuturist/forgotten_futurist_rg-webfont.svg#forgotten_futurist_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ISOCPUR';
+    src: url('../fonts/isocpur/isocpeur-webfont.eot');
+    src: url('../fonts/isocpur/isocpeur-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/isocpur/isocpeur-webfont.woff') format('woff'),
+         url('../fonts/isocpur/isocpeur-webfont.ttf') format('truetype'),
+         url('../fonts/isocpur/isocpeur-webfont.svg#isocpeurregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'quicksandlight';
+    src: url('../fonts/quicksand_light-webfont.eot');
+    src: url('../fonts/quicksand_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/quicksand_light-webfont.woff2') format('woff2'),
+         url('../fonts/quicksand_light-webfont.woff') format('woff'),
+         url('../fonts/quicksand_light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'aruallight';
+    src: url('../fonts/arual-webfont.eot');
+    src: url('../fonts/arual-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/arual-webfont.woff2') format('woff2'),
+         url('../fonts/arual-webfont.woff') format('woff'),
+         url('../fonts/arual-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
