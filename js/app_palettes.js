@@ -79,7 +79,7 @@ $(document).ready(function(){
     Backbone.history.start();
 
     contact = {
-        "name": "Theodore Kluge",
+        "name": "Name",
         };
     console.warn(contact);
 });
